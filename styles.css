@@ -1,0 +1,278 @@
+/* styles.css */
+
+/* Applying base styles to the body element */
+body {
+    font-family: Arial, sans-serif; /* Setting the default font */
+    margin: 0; /* Removing default body margin */
+    padding: 0; /* Removing default body padding */
+    background: #f0f4f8; /* Setting a light background color */
+    color: #333; /* Setting the default text color */
+}
+
+/* Styling the header element */
+header {
+    background-color: #4CAF50; /* Setting the header background color */
+    color: white; /* Setting the header text color */
+    padding: 15px 0; /* Adding vertical padding inside the header */
+    margin-bottom: 20px; /* Adding space below the header */
+}
+
+/* Styling the H1 heading within the header */
+header h1 {
+    text-align: center; /* Centering the heading text */
+    margin: 0; /* Removing default heading margins */
+}
+
+/* Styling the main content container */
+.container {
+    max-width: 900px; /* Limiting the maximum width of the content */
+    margin: 20px auto; /* Centering the container horizontally with top/bottom margin */
+    padding: 0 15px; /* Adding horizontal padding for small screens */
+}
+
+/* Styling the input section containing controls */
+.input-section {
+    background: white; /* Setting a white background */
+    padding: 20px 25px; /* Adding padding inside the section */
+    border-radius: 8px; /* Applying rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adding a subtle shadow */
+    margin-bottom: 25px; /* Adding space below this section */
+    display: flex; /* Using flexbox for layout */
+    align-items: center; /* Aligning items vertically center */
+    gap: 15px; /* Adding space between flex items */
+    flex-wrap: wrap; /* Allowing items to wrap onto the next line */
+}
+
+/* Styling labels within the input section */
+.input-section label {
+    font-weight: bold; /* Making label text bold */
+}
+
+/* Styling the budget slider input */
+#budget {
+    flex-grow: 1; /* Allowing the slider to grow and fill available space */
+    min-width: 150px; /* Setting a minimum width */
+    cursor: pointer; /* Changing cursor to a pointer on hover */
+}
+
+/* Styling the span displaying the budget value */
+#budgetValue {
+    font-weight: bold; /* Making the value bold */
+    color: #4CAF50; /* Setting the text color */
+    min-width: 50px; /* Ensuring minimum width */
+    text-align: right; /* Aligning text to the right */
+}
+
+/* Styling the search button */
+#searchBtn {
+    padding: 10px 20px; /* Adding padding inside the button */
+    background-color: #4CAF50; /* Setting the background color */
+    color: white; /* Setting the text color */
+    border: none; /* Removing the default border */
+    border-radius: 5px; /* Applying rounded corners */
+    cursor: pointer; /* Changing cursor on hover */
+    font-size: 1em; /* Setting the font size */
+    transition: background-color 0.3s ease; /* Adding a smooth background transition on hover */
+}
+
+/* Styling the search button on hover */
+#searchBtn:hover {
+    background-color: #45a049; /* Darkening the background color slightly */
+}
+
+/* Styling the results section containing map and itinerary */
+.results {
+    background: white; /* Setting a white background */
+    padding: 25px; /* Adding padding inside */
+    border-radius: 8px; /* Applying rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adding a subtle shadow */
+    margin-top: 20px; /* Adding space above this section */
+}
+
+/* Styling the map container div */
+#map {
+    width: 100%; /* Making the map fill the container width */
+    height: 450px; /* Setting a fixed height */
+    border-radius: 8px; /* Applying rounded corners */
+    margin-bottom: 25px; /* Adding space below the map */
+    border: 1px solid #ddd; /* Adding a light border */
+    position: relative; /* Setting position for child elements */
+    z-index: 1; /* Setting stack order */
+}
+
+/* Styling the H2 heading within the itinerary section */
+#itinerary h2 {
+    text-align: center; /* Centering the heading */
+    color: #2c3e50; /* Setting the text color */
+    margin-bottom: 20px; /* Adding space below */
+}
+
+/* --- Destination Card Styles --- */
+/* Styling individual destination cards */
+.destination {
+    margin-bottom: 25px; /* Adding space between cards */
+    border: 1px solid #e0e0e0; /* Setting a light border */
+    border-radius: 8px; /* Applying rounded corners */
+    background-color: #ffffff; /* Setting a white background */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Adding a very light shadow */
+    overflow: hidden; /* Hiding content that overflows the rounded corners */
+    display: grid; /* Using grid layout for the card */
+    grid-template-columns: 1fr; /* Setting a single column layout */
+}
+
+/* --- Destination Card Image Styles --- */
+/* Styling the container for the destination image */
+.destination-image-container {
+    grid-column: 1 / -1; /* Making the container span the full grid width */
+}
+
+/* Styling the destination image itself */
+.destination-image {
+    display: block; /* Treating the image as a block element */
+    width: 100%; /* Making the image fill its container width */
+    height: 200px; /* Setting a fixed height */
+    object-fit: cover; /* Scaling the image to cover the area, cropping if needed */
+    background-color: #eee; /* Setting a placeholder background color */
+}
+
+/* --- Destination Card Content Styles --- */
+/* Styling the container for the text content below the image */
+.destination-content {
+    padding: 15px; /* Adding padding around the content */
+    display: grid; /* Using grid layout for the content */
+    grid-template-columns: 1fr; /* Setting a single column layout by default */
+    gap: 15px; /* Adding space between grid items */
+}
+
+/* Styling the H3 heading (destination title) within the card */
+.destination h3 {
+    grid-column: 1 / -1; /* Making the title span the grid width */
+    margin-top: 0; /* Removing top margin */
+    margin-bottom: 0; /* Removing bottom margin */
+    color: #3498db; /* Setting the title color */
+    font-size: 1.4em; /* Setting the title font size */
+}
+
+/* Styling common subsections (details, weather, activities) within the card content */
+.details, .weather-info, .activities {
+    padding: 10px; /* Adding padding inside subsections */
+    background: #f9f9f9; /* Setting a very light background */
+    border-radius: 5px; /* Applying rounded corners */
+    border: 1px solid #eee; /* Adding a very light border */
+    margin: 0; /* Removing default margins */
+}
+
+/* Styling text elements within the subsections */
+.details p, .weather-info p, .activities p, .activities ul {
+    margin: 5px 0; /* Adding vertical margin */
+    font-size: 0.95em; /* Setting a slightly smaller font size */
+}
+
+/* Styling the H4 heading within the activities subsection */
+.activities h4 {
+    margin-top: 0; /* Removing top margin */
+    margin-bottom: 8px; /* Adding space below */
+    color: #555; /* Setting text color */
+    font-size: 1em; /* Setting font size */
+}
+
+/* Styling the unordered list within the activities subsection */
+.activities ul {
+    list-style: none; /* Removing default list bullets */
+    padding-left: 0; /* Removing default list padding */
+}
+
+/* Styling individual list items within the activities list */
+.activities li {
+    margin-bottom: 5px; /* Adding space below list items */
+    padding-left: 18px; /* Adding left padding for the icon */
+    position: relative; /* Setting position context for the pseudo-element */
+}
+
+/* Adding a marker icon before each activity list item */
+.activities li::before {
+    content: "📍"; /* Specifying the emoji content */
+    position: absolute; /* Positioning the icon absolutely relative to the li */
+    left: 0; /* Placing the icon at the left edge */
+    top: 1px; /* Adjusting vertical alignment */
+    font-size: 0.8em; /* Setting the icon size */
+}
+
+
+/* Styling for general loading, error, and initial message elements */
+.loading, .error, .initial-message {
+    text-align: center; /* Centering the text */
+    padding: 30px; /* Adding padding around */
+    font-size: 1.1em; /* Setting font size */
+    color: #666; /* Setting text color */
+    margin: 20px 0; /* Adding vertical margin */
+}
+
+/* Specific styling for error messages */
+.error {
+    color: #dc3545; /* Setting a red text color */
+    border: 1px solid #ffcccc; /* Adding a light red border */
+    background-color: #f8d7da; /* Setting a light red background */
+    border-radius: 8px; /* Applying rounded corners */
+}
+
+/* Mapbox Popup Customization */
+/* Styling the map popups */
+.mapboxgl-popup {
+    max-width: 200px; /* Limiting the popup width */
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif; /* Setting the popup font */
+    z-index: 10; /* Ensuring popups are above other map elements */
+}
+
+/* Styling the content area within the map popups */
+.mapboxgl-popup-content {
+    padding: 10px; /* Adding padding inside */
+    text-align: center; /* Centering the content */
+    border-radius: 5px; /* Applying rounded corners */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Adding a shadow */
+}
+/* Styling the H4 title within the map popups */
+.mapboxgl-popup-content h4 {
+    margin: 0 0 5px 0; /* Setting margins */
+    color: #3498db; /* Setting the text color */
+}
+/* Styling paragraph text within the map popups */
+.mapboxgl-popup-content p {
+    margin: 0; /* Removing default margins */
+}
+
+/* --- Responsive Adjustments --- */
+/* Applying styles for screens 700px wide or larger */
+@media (min-width: 700px) {
+    /* Adjusting the grid layout for destination content on wider screens */
+    .destination-content {
+        /* Allowing content sections to arrange in columns */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+     /* Ensuring the title spans all columns even in multi-column layout */
+     .destination-content h3 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Applying styles for screens 768px wide or narrower */
+@media (max-width: 768px) {
+    /* Reducing map height on smaller screens */
+    #map {
+        height: 350px;
+    }
+    /* Stacking input section items vertically */
+    .input-section {
+        flex-direction: column; /* Changing flex direction to column */
+        align-items: stretch; /* Making items stretch horizontally */
+    }
+    /* Centering the budget value text when stacked */
+    #budgetValue {
+        text-align: center;
+        margin-top: 5px; /* Adding space above */
+    }
+    /* Reducing image height on smaller screens */
+     .destination-image {
+        height: 160px;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Budget Backpacker Planner</title> <!-- Setting the title appearing in the browser tab -->
+
+  <!-- Linking to my CSS file for styling -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+</head>
+<body> 
+
+  <!-- Defining the header section -->
+  <header>
+    <h1>🌍 Budget Backpacker Planner</h1> <!-- Displaying the main heading -->
+  </header>
+
+  <!-- Using a container div for layout and centering -->
+  <div class="container">
+
+    <!-- Defining the input section for user controls -->
+    <div class="input-section">
+      <label for="budget">Set Your Max Budget:</label> <!-- Displaying the text label for the slider -->
+      <!-- Creating the range slider input -->
+      <input type="range" id="budget" name="budget" min="100" max="2000" value="405" step="5">
+      <!-- Using a span to display the current budget value -->
+      <span id="budgetValue">$405</span>
+      <!-- Creating the button to trigger the search -->
+      <button id="searchBtn">Find Cheap Trips!</button>
+    </div>
+
+    <!-- Defining the section for displaying map and results -->
+    <div class="results">
+      <!-- Creating the div where the Mapbox map will be placed -->
+      <div id="map"></div>
+      <!-- Creating the div where trip results (destination cards) will be inserted by JavaScript -->
+      <div id="itinerary">
+        <!-- Displaying an initial message before any search is done -->
+        <p class="initial-message">Adjust the slider and click "Find Cheap Trips!" to see destinations within your budget.</p>
+      </div>
+    </div>
+
+  </div> <!-- Closing the main container div -->
+
+  <!-- Including the Mapbox JavaScript library file -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+  <!-- Including my custom JavaScript file -->
+  <script src="index.js"></script>
+
+</body>
+</html>
